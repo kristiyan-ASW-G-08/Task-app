@@ -1,0 +1,22 @@
+@import 'vendor/normalize';
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/media-queries';
+@import 'partials/btn-section';
+@import 'partials/modal';
+@import 'partials/task-form';
+@import 'partials/task';
+@import 'partials/tasks-section';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  color: $dark;
+  @include flex-center;
+  
+}

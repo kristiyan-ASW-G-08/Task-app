@@ -1,0 +1,7 @@
+.tasks-section {
+  width: 100%;
+  @include flex-center;
+  @include large-screen {
+    width: 60%;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "task-app",
+  "version": "1.0.0",
+  "description": "Task app build with vanilla javascript and scss.",
+  "main": "index.js",
+  "author": "Kristiyan Todorov",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0",
+    "puppeteer": "^1.10.0",
+    "sass": "^1.15.1"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watchAll"
+  }
+}

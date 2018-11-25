@@ -1,0 +1,12 @@
+.btn-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  button {
+    margin: 2rem 1rem;
+    @include button(6rem, 2rem, $light, $primary, 1rem);
+    &.clear-tasks-btn{
+        background: $secondary;
+    }
+  }
+}

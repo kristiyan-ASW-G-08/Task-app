@@ -1,0 +1,15 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+@mixin button($width, $height, $color, $background, $font) {
+  outline: none;
+  width: $width;
+  height: $height;
+  border: none;
+  background: $background;
+  color: $color;
+  font-size: $font;
+}

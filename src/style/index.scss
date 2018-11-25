@@ -18,5 +18,11 @@ body {
   overflow-x: hidden;
   color: $dark;
   @include flex-center;
-  
+}
+.alert {
+  font-size: 1.2rem;
+  background: $secondary;
+  color: $light;
+  width: 100vw;
+  text-align: center;
 }

@@ -9,7 +9,7 @@ const editItem = (arr, id, editedItem) => {
 };
 const getFormData = formElements => {
   const formData = {};
-  Object.values(formElements).map(element => {
+  Object.values(formElements).forEach(element => {
     if (element.type === 'submit') {
     } else {
       formData[element.name] = element.value;

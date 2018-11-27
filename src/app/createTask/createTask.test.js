@@ -28,19 +28,4 @@ describe('createTask', () => {
       testTaskElement.childElementCount
     );
   });
-  describe('clicking delete btn', () => {
-    const deleteBtn = body.firstElementChild.children[2];
-    beforeEach(() => {
-      deleteBtn.click();
-    });
-    it('shoud be delete btn', () => {
-      expect(deleteBtn.textContent).toMatch('delete');
-    });
-    it('should  remove task from dom  when delete btn is clicked', () => {
-      expect(body.childElementCount).toBe(0);
-    });
-    it('should remove task from localStorage when delete btn is clicked', () => {
-      expect(JSON.parse(localStorage.getItem('tasks'))).toEqual([]);
-    });
-  });
 });

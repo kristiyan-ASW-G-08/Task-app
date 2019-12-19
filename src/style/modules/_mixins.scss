@@ -12,4 +12,9 @@
   background: $background;
   color: $color;
   font-size: $font;
+  &:hover {
+    background: $color;
+    color: $background;
+    border: solid 1px $background;
+  }
 }

@@ -7,11 +7,14 @@
     <title>Task app</title>
 </head>
 <body>
-    <section class="btn-section">
-            <button class="open-form-btn">Add Task</button>
-            <button  class="clear-tasks-btn">Clear Tasks</button>
+    <section>
+        <form  id="task-form">
+            <input type="text" name="title" placeholder="Title"/> 
+            <input type="text" name="description" placeholder="Description"/> 
+            <button>Add Task</button>
+        </form>
     </section>
-    <section class="tasks-section"></section>
+    <section id="tasks-container"></section>
     </section>
     <script src="./src/index.js"></script>
 </body>

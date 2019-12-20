@@ -2,8 +2,8 @@
   background: $primary;
   width: 100vw;
   height: 50vh;
-  @include flex-center;
-  .remove-modal-btn {
-    @include button(2rem, 4rem, $light, transparent, 1.5rem);
+  display: none;
+  &-active {
+    @include flex-center;
   }
 }

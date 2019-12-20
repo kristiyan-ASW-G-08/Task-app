@@ -1,10 +1,10 @@
-const createTaskElement = (title, description, id) => {
+const createTaskElement = ({ title, description, id }) => {
   const taskElement = document.createElement("article");
-  taskElement.setAttribute("id", id);
-  taskElement.class = "task";
+  taskElement.id = id;
+  taskElement.className = "task";
   taskElement.innerHTML = `
-    <p>${title}</p>
-    <p>${description}</p>
+    <p id="${id}-title">${title}</p>
+    <p id="${id}-description">${description}</p>
     <button class="edit-btn">Edit</button>
     <button class="delete-btn">Delete</button>
 `;

@@ -7,10 +7,18 @@
     <title>Task app</title>
 </head>
 <body>
+    <section class="modal" id="edit-form-modal">
+        <form class="task-form" id="edit-form" hidden>
+            <input id="edit-title" type="text" required name="title" placeholder="Title"/> 
+            <input id="edit-description" type="text" required name="description" placeholder="Description"/> 
+            <input id="edit-id"  type="hidden"  name="id" placeholder="Description"/> 
+            <button>Edit Task</button>
+        </form>
+    </section>
     <section>
-        <form  id="task-form">
-            <input type="text" name="title" placeholder="Title"/> 
-            <input type="text" name="description" placeholder="Description"/> 
+        <form class="task-form" id="add-form">
+            <input type="text" required name="title" placeholder="Title"/> 
+            <input type="text"  required name="description" placeholder="Description"/> 
             <button>Add Task</button>
         </form>
     </section>

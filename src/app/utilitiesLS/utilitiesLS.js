@@ -1,34 +1,29 @@
-import utilities from "../utilities/utilities";
+import { removeItem, editItem } from "../utilities/utilities";
 export const setToLS = (target, value) => {
   localStorage.setItem(target, JSON.stringify(value));
 };
 export const createId = () => {
-  let Id;
-  if (localStorage.getItem("Id")) {
-    Id = parseInt(JSON.parse(localStorage.getItem("Id")));
-    Id++;
-  } else {
-    Id = 1;
-  }
-  setToLS("Id", Id);
-  return Id;
+  const id = parseInt(JSON.parse(localStorage.getItem("Id"))) || 1;
+  return id + 1;
 };
-export const editItemFromLS = (target, id, editedItem) => {
-  const items = JSON.parse(localStorage.getItem(target));
-  const editedItems = utilities.editItem(items, id, editedItem);
-  setToLS(target, editedItems);
+export const editTaskLS = (id, editedTask) => {
+  const tasks = editItem(
+    JSON.parse(localStorage.getItem("tasks")),
+    id,
+    editedTask
+  );
+  setToLS("tasks", tasks);
 };
-export const saveToLS = (target, item) => {
+export const saveToLS = item => {
   let items = [];
-  if (localStorage.getItem(target)) {
-    items = utilities.addItem(JSON.parse(localStorage.getItem(target)), item);
+  if (localStorage.getItem("tasks")) {
+    items = [...JSON.parse(localStorage.getItem("tasks")), item];
   } else {
-    items = utilities.addItem([], item);
+    items = [item];
   }
-  setToLS(target, items);
+  localStorage.setItem("tasks", JSON.stringify(items));
 };
-export const removeFromLS = (target, id) => {
-  const items = [...JSON.parse(localStorage.getItem(target))];
-  const editedItems = utilities.removeItem(items, id);
-  setToLS(target, editedItems);
+export const removeFromLS = id => {
+  const editedTasks = removeItem(JSON.parse(localStorage.getItem("tasks")), id);
+  setToLS("tasks", editedTasks);
 };

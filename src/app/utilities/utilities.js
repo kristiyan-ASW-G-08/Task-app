@@ -1,9 +1,15 @@
 export const addItem = (arr, item) => {
   return [...arr, item];
 };
-export const removeItem = (arr, id) => {
-  return arr.filter(item => item.id !== id);
+export const removeItem = (arr, id) => arr.filter(item => item.id !== id);
+export const createId = () => {
+  if (!JSON.parse(localStorage.getItem("Id"))) {
+    return 1;
+  }
+  const currentId = parseInt(JSON.parse(localStorage.getItem("Id"))) || 1;
+  return;
 };
+
 export const editItem = (arr, id, editedItem) => {
   return addItem(removeItem(arr, id), editedItem);
 };

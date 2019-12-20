@@ -1,19 +1,11 @@
 .task {
-  margin: 1rem 0;
-  summary,
+  text-align: center;
+  border-bottom: 1px $primary solid;
   p {
-    overflow-wrap: break-word;
-    text-align: center;
+    font-size: 1.2rem;
   }
-  summary {
-      font-size: 1.4rem;
-      outline: none;
-  }
-  p{
-      font-size: 1.2rem;
-  }
-  button{
-      @include button(4rem,2.5rem,$light,$primary,1rem);
-      margin:1rem;
+  button {
+    @include button(4rem, 2.5rem, $light, $primary, 1rem);
+    margin: 1rem;
   }
 }
